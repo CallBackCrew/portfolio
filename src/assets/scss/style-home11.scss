@@ -1,0 +1,351 @@
+//Root for home 9
+:root {
+
+    //theme color
+    --theme-color1: #343248;
+    --theme-color2: #f35353;
+    --theme-color3: #252831;
+    --theme-color4: #59b473;
+    
+    --text-color-bg-theme-color1: #fff;
+    --text-color-bg-theme-color2: #fff;
+    --text-color-bg-theme-color3: #fff;
+    --text-color-bg-theme-color4: #fff;
+  
+    --headings-color: #222429;
+    --Link -color: #222429;
+  
+    --bg-theme-color2: var(--theme-color2);
+    --border-theme-color2: var(--theme-color2);
+    --bg-theme-color1: var(--theme-color1);
+    --border-theme-color1: var(--theme-color1);
+  }
+  //Write your css code below for home 9
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+@mixin overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+@mixin vertical-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+@mixin absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+/*** 
+
+====================================================================
+    layout 10
+====================================================================
+
+***/
+
+.video_about_11{
+    position: relative;
+    .play-btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        color: #fff;
+        background-color: var(--bg-theme-color2);
+        font-size: 18px;
+        z-index: 1;
+    }
+    .experience{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--theme-color2);
+        color: #ffffff;
+        padding: 30px 40px 35px 40px;
+        box-shadow: 0 15px 60px rgba(0,0,0, .08) ;
+        font-size: 16px;
+        i{                
+            font-size: 56px;
+        }
+        strong {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 46px;
+            line-height: 36px;
+            color: #ffffff;
+            font-weight: 700;
+            display: block;
+        }
+    }
+}
+.about-section-layout-11 {
+    position: relative;
+    padding: 120px 0px;
+    background-image: url(../images/layout_10/bg-shape5.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .image-column {
+        .video_about_11{
+            position: relative;
+        }
+        .image-1 {
+            margin-bottom: 0px;
+        }
+    }
+    .btn-box{
+        margin-top: 40px;
+    }
+    .info-btn {
+        position: relative;
+        display: block;
+        font-size: 24px;
+        color: var(--theme-color1);
+        text-align: left;
+        font-weight: 600;
+        line-height: 25px;
+        padding-left: 85px;
+        margin-right: 40px;
+
+        small {
+            font-size: 15px;
+            font-weight: 400;
+            color: #808287;
+        }
+
+        i {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -32px;
+            line-height: 70px;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            border-radius: 50%;
+            color: var(--theme-color2);
+            background-color: #e9e9e9;
+            font-size: 22px;   
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            i{
+                transform: rotate(360deg);
+                background-color: var(--theme-color2);
+                color: #ffffff;
+            }
+        }
+    }
+    .skills .skill-item .skill-bar{
+        height: 8px;
+        .bar-inner{
+            border-radius: 0;
+            height: 8px;
+            .bar{
+                position: unset;
+                background-color: var(--theme-color2);
+                border-radius: 0;
+                height: 8px;
+            }
+            .skill-percentage{
+                color: var(--theme-color2);
+            }
+        }
+    }
+}
+
+
+.services-section-bg{
+    position: relative;
+    background-image: url(../images/layout_10/feature-bg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #F8F5F1 0%, #F8F5F1DB 100%);
+        width: 100%;
+        height: 551px;
+        top: 0;
+
+    }
+    .service-block .image-box .icon-box{
+        color: #ffffff;
+    }
+}
+.call-to-action-bg{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: var(--theme-color2);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .outer-box{
+        background-color: unset;
+    }
+}
+
+/* About Block layout-10 */
+
+.about-block-layout-10 {
+    position: relative;
+    padding-left: 110px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e6e8ed;
+    margin-bottom: 30px;
+    &:last-child{
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 48px;
+        color: #333;    
+        height: 90px;
+        width: 90px;
+        line-height: 90px;
+        text-align: center;
+        background-color: var(--theme-color2);
+        border-radius: 50%;
+        transition: all 300ms ease;
+    }
+    &:hover .icon {
+        background-color: #fff;
+        transform: rotateY(-190deg);
+    }
+    .title {
+        position: relative;
+        top: -3px;
+        margin-bottom: 10px;
+    }
+    .text {
+        margin-top: 5px;
+    }
+}
+
+
+.about-block-11 {
+    position: relative;
+    margin-bottom: 30px;
+    .text {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 400;
+        color: #2A2A2A;
+
+        i {
+            position: relative;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    }
+}
+/*** 
+
+====================================================================
+    Why Choose Us
+====================================================================
+
+***/
+
+.why-choose-us-11{
+    position: relative;
+    background-color: rgba(0,0,0, 1);
+    &::before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/layout_10/right-bg2.png);
+        background-repeat: no-repeat;
+        background-position: center right;     
+        opacity: .5;   
+    }
+    .content-column{
+        position: relative;
+        .inner-column{
+            padding-top: 80px;
+            .sec-title{
+                margin-bottom: 50px;
+            }
+        }
+        .image-box{
+            position: relative;
+            .image{
+                position: relative;
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            .caption{
+                position: absolute;
+                left: 50px;
+                bottom: 0;
+                width: 100%;
+                max-width: 340px;
+                padding: 30px 60px 35px;
+                padding-right: 50px;
+                background-color: var(--bg-theme-color2);
+                font-size: 18px;
+                line-height: 32px;
+                color: var(--theme-color1);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .image-column{
+        position: relative;
+        .inner-column{
+            margin-left: -358px;
+            .image{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .video_about_11{
+        &::before{
+            left: 450px;
+            right: unset; 
+        }
+    }
+    .about-section-layout-11 {
+        .image-column {
+            margin-bottom: 50px;
+            .image-10{
+                left: 0;
+                right: unset;
+            }
+        }
+    }
+  }
